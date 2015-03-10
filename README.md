@@ -1,2 +1,2 @@
 # addressbook
-A simple single page addressbook powered by Ember.js
+A simple single page addressbook app powered by Ember.js
