@@ -4,7 +4,13 @@ module.exports = function(app) {
 
   contactsRouter.get('/', function(req, res) {
     res.send({
-      'contacts': []
+      'contacts': [{
+          id: 1,
+          firstName: 'Andrea',
+          lastName: 'Schnock',
+          address: 'Waldstr. 21, 13156 Berlin',
+          email: 'andrea@meineschnocks.de'
+      }]
     });
   });
 
@@ -13,9 +19,18 @@ module.exports = function(app) {
   });
 
   contactsRouter.get('/:id', function(req, res) {
+    // res.send({
+    //   'contacts': {
+    //     id: req.params.id
+    //   }
+    // });
     res.send({
-      'contacts': {
-        id: req.params.id
+      'contact': {
+          id: 1,
+          firstName: 'Andrea',
+          lastName: 'Schnock',
+          address: 'Waldstr. 21, 13156 Berlin',
+          email: 'andrea@meineschnocks.de'
       }
     });
   });

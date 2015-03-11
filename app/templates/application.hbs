@@ -1,3 +1,21 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<header class="main-header">Addressbook</header>
+
+<nav>
+    <header>
+        Contacts
+    </header>
+
+    <ul class="contact-list">
+    
+        {{#each contact in model}}
+        <li class="contact-list-item">
+            {{#link-to 'contacts.view' contact}}
+                {{contact.firstName}}
+            {{/link-to}}
+        </li>
+        {{/each}}
+
+    </ul>    
+</nav>
 
 {{outlet}}
