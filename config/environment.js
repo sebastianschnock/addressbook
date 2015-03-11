@@ -19,6 +19,13 @@ module.exports = function(environment) {
     }
   };
 
+  // set sass options
+  ENV.sassOptions = {
+    includePaths: [
+        'bower_components/susy/sass'
+    ],
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
