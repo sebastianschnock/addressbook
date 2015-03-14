@@ -21,6 +21,5 @@ testem.log
 .bowerrc
 .editorconfig
 .ember-cli
-.jshintrc
 .nvmrc
 .travis.yml
