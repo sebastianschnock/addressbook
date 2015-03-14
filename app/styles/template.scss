@@ -1,0 +1,55 @@
+@import 'base';
+@import 'typography';
+
+//------------------------------------------------------------------------------
+//
+//  Template
+//
+//------------------------------------------------------------------------------
+
+
+
+.main-header {
+ 
+    @include adjust-font-size-to($font-size-xxl);
+    // @extend %header--centered;
+    border-bottom: 1px solid $border-color--default;
+    padding: rhythm(0.5) 0;
+    font-family: 'FFF_Tusj';
+    text-align: center;
+}
+
+.main-content {
+    @include container;
+}
+
+// navigation
+
+.main-navigation {
+    @include span(12);
+}
+
+.main-navigation__header {
+    @include adjust-font-size-to($font-size-l);
+    @extend %header--centered;
+}
+
+.contact-list {
+    text-align: center;
+}
+
+.contact-list-item {
+
+    @include adjust-leading-to(2);
+    
+    border-top: 1px solid $border-color--default;
+    &:last-of-type {
+        border-bottom: 1px solid $border-color--default;
+    }
+    
+    a {
+        @include hover-link;
+        @include link-colors($color-primary);
+        display: block;
+    }
+}

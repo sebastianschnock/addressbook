@@ -5,80 +5,14 @@
 // apply css reset (Eric Meyer 2.0)
 @import "compass/reset";
 
-
-
-//------------------------------------------------------------------------------
-//
-//  Typography
-//
-//------------------------------------------------------------------------------
-
-
-
-$base-font-size: 16px;
-$base-line-height: 24px;
-@include establish-baseline;
-
-$font-size-l: 24px;
-$font-size-xl: 32px;
-$font-size-xxl: 48px;
-
-@font-face {
-    font-family: GrandHotel;
-    src: url('fonts/GrandHotel-Regular.otf');
-}
-
-@font-face {
-    font-family: FFF_Tusj;
-    src: url('fonts/FFF_Tusj.ttf');
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url('fonts/Montserrat-Regular.otf');
-}
+@import 'typography';
+@import 'grid';
+@import 'template';
+@import 'contacts';
 
 
 
 
-
-//------------------------------------------------------------------------------
-//
-//  Grid
-//
-//------------------------------------------------------------------------------
-
-
-
-$susy: (
-    columns: 12,
-    gutters: 0.25,
-    debug: (
-        // image: show,
-        // image: show-baseline,
-        // image: show-columns,
-    )
-);
-
-
-
-
-
-//------------------------------------------------------------------------------
-//
-//  Base styles
-//
-//------------------------------------------------------------------------------
-
-
-
-$border-color--default: #404040;
-$color-primary: #000000;
-
-%header--centered {
-    font-weight: bold;
-    text-align: center;
-}
 
 html {
     font-family: 'Montserrat';
@@ -86,83 +20,9 @@ html {
 
 
 
-//------------------------------------------------------------------------------
-//
-//  Template
-//
-//------------------------------------------------------------------------------
-
-
-
-.main-header {
- 
-    @include adjust-font-size-to($font-size-xxl);
-    // @extend %header--centered;
-    border-bottom: 1px solid $border-color--default;
-    padding: rhythm(0.5) 0;
-    font-family: 'FFF_Tusj';
-    text-align: center;
-}
-
-.main-content {
-    @include container;
-}
-
-// navigation
-
-.main-navigation {
-    @include span(12);
-}
-
-.main-navigation__header {
-    @include adjust-font-size-to($font-size-l);
-    @extend %header--centered;
-}
-
-.contact-list {
-    text-align: center;
-}
-
-.contact-list-item {
-
-    @include adjust-leading-to(2);
-    
-    border-top: 1px solid $border-color--default;
-    &:last-of-type {
-        border-bottom: 1px solid $border-color--default;
-    }
-    
-    a {
-        @include hover-link;
-        @include link-colors($color-primary);
-        display: block;
-    }
-}
 
 
 
 
 
-//------------------------------------------------------------------------------
-//
-//  Contacts
-//
-//------------------------------------------------------------------------------
 
-
-
-.contact-details {
-
-    @include span(12);
-    @include leader(1);
-    @include prefix(2);
-
-    // font-family: 'Montserrat';
-}
-
-.contact-details__display-name {
-    // @include bleed(1em);
-    margin-left: -0.5em;
-    @include adjust-font-size-to($font-size-xl);
-    font-family: 'GrandHotel';
-}

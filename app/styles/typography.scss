@@ -1,0 +1,30 @@
+//------------------------------------------------------------------------------
+//
+//  Typography
+//
+//------------------------------------------------------------------------------
+
+
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+
+$font-size-l: 24px;
+$font-size-xl: 32px;
+$font-size-xxl: 48px;
+
+@font-face {
+    font-family: GrandHotel;
+    src: url('fonts/GrandHotel-Regular.otf');
+}
+
+@font-face {
+    font-family: FFF_Tusj;
+    src: url('fonts/FFF_Tusj.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('fonts/Montserrat-Regular.otf');
+}

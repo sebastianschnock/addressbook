@@ -1,0 +1,25 @@
+@import 'typography';
+
+//------------------------------------------------------------------------------
+//
+//  Contacts
+//
+//------------------------------------------------------------------------------
+
+
+
+.contact-details {
+
+    @include span(12);
+    @include leader(1);
+    @include prefix(2);
+
+    // font-family: 'Montserrat';
+}
+
+.contact-details__display-name {
+    // @include bleed(1em);
+    margin-left: -0.5em;
+    @include adjust-font-size-to($font-size-xl);
+    font-family: 'GrandHotel';
+}
