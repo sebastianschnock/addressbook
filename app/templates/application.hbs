@@ -1,27 +1,34 @@
 <header class="main-header">Addressbook</header>
 
-<nav>
-    <header>
-        Contacts
-    </header>
+<section class="main-content">
 
-    <ul class="contact-list">
+    {{!-- navigation - select contact --}}
+    
+    <nav class="main-navigation">
 
-        {{!-- create new contact --}}
-        <li>
-            - new contact -
-        </li>    
+        <header class="main-navigation__header">
+            Contacts
+        </header>
 
-        {{!-- contacts --}}
-        {{#each contact in model}}
-        <li class="contact-list-item">
-            {{#link-to 'contacts.view' contact}}
-                {{contact.displayName}}
-            {{/link-to}}
-        </li>
-        {{/each}}
+        <ul class="contact-list">
 
-    </ul>    
-</nav>
+            {{!-- create new contact --}}
+            <li class="contact-list-item">
+                - new contact -
+            </li>    
 
-{{outlet}}
+            {{!-- contacts --}}
+            {{#each contact in model}}
+            <li class="contact-list-item">
+                {{#link-to 'contacts.view' contact}}
+                    {{contact.displayName}}
+                {{/link-to}}
+            </li>
+            {{/each}}
+
+        </ul>    
+    </nav>
+
+    {{outlet}}
+    
+</section>
