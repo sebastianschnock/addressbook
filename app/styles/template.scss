@@ -1,5 +1,6 @@
 @import 'base';
 @import 'typography';
+@import "compass/typography/links";
 
 //------------------------------------------------------------------------------
 //
@@ -16,11 +17,13 @@
     border-bottom: 1px solid $border-color--default;
     padding: rhythm(0.5) 0;
     font-family: 'FFF_Tusj';
+    // font-family: 'GrandHotel';
     text-align: center;
 }
 
 .main-content {
     @include container;
+    position: relative;
 }
 
 // navigation
@@ -41,15 +44,9 @@
 .contact-list-item {
 
     @include adjust-leading-to(2);
-    
+
     border-top: 1px solid $border-color--default;
     &:last-of-type {
         border-bottom: 1px solid $border-color--default;
-    }
-    
-    a {
-        @include hover-link;
-        @include link-colors($color-primary);
-        display: block;
     }
 }

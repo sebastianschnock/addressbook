@@ -1,3 +1,5 @@
+@import "compass/typography/vertical_rhythm";
+
 //------------------------------------------------------------------------------
 //
 //  Typography
@@ -14,17 +16,37 @@ $font-size-l: 24px;
 $font-size-xl: 32px;
 $font-size-xxl: 48px;
 
-@font-face {
-    font-family: GrandHotel;
-    src: url('fonts/GrandHotel-Regular.otf');
-}
 
+
+// FFF Tusj
 @font-face {
     font-family: FFF_Tusj;
     src: url('fonts/FFF_Tusj.ttf');
 }
 
+// Montserrat
 @font-face {
     font-family: Montserrat;
     src: url('fonts/Montserrat-Regular.otf');
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('fonts/Montserrat-Light.otf');
+    font-weight: lighter;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('fonts/Montserrat-Bold.otf');
+    font-weight: bold;
+}
+
+// Quicksand
+@font-face {
+    font-family: Quicksand;
+    src: url('fonts/Quicksand-Regular.otf');
+}
+@font-face {
+    font-family: Quicksand;
+    src: url('fonts/Quicksand-Bold.otf');
+    font-weight: bold;
 }

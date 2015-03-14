@@ -1,9 +1,8 @@
-@import "susy";
-@import "compass/typography/vertical_rhythm";
-@import "compass/typography/links";
+@import 'susy';
+@import 'compass/css3/box-sizing';
 
 // apply css reset (Eric Meyer 2.0)
-@import "compass/reset";
+@import 'compass/reset';
 
 @import 'typography';
 @import 'grid';
@@ -12,14 +11,27 @@
 
 
 
-
+* { 
+   @include box-sizing(border-box); 
+}
 
 html {
-    font-family: 'Montserrat';
+    // font-family: 'Montserrat';
+    font-family: 'Quicksand';
 }
 
 
+a {
+    // @include hover-link;
+    // @include unstyled-link;
+    text-decoration: none;
+    @include link-colors($color-link, $color-link--hover);
+    display: block;
 
+    &.active {
+        font-weight: bold;
+    }
+}
 
 
 

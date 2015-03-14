@@ -16,3 +16,11 @@
 npm-debug.log
 testem.log
 /vendor
+
+# ignored for now, might change later
+.bowerrc
+.editorconfig
+.ember-cli
+.jshintrc
+.nvmrc
+.travis.yml
