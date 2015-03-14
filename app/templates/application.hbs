@@ -6,11 +6,17 @@
     </header>
 
     <ul class="contact-list">
-    
+
+        {{!-- create new contact --}}
+        <li>
+            - new contact -
+        </li>    
+
+        {{!-- contacts --}}
         {{#each contact in model}}
         <li class="contact-list-item">
             {{#link-to 'contacts.view' contact}}
-                {{contact.firstName}}
+                {{contact.displayName}}
             {{/link-to}}
         </li>
         {{/each}}
