@@ -2,7 +2,8 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
 
-    isEditing: false,
+    queryParams: ['edit'],
+    edit: false,
 
 
 
@@ -16,17 +17,17 @@ export default Ember.ObjectController.extend({
 
     actions: {
 
-        edit: function() {
-            this.set('isEditing', true);
+        switchToEditMode: function() {
+            this.set('edit', true);
         },
 
         save: function() {
-            this.set('isEditing', false);
+            this.set('edit', false);
             return true;
         },
 
         closeDetails: function() {
-            this.set('isEditing', false);
+            this.set('edit', false);
             this.transitionToRoute('contacts');
         }
     }

@@ -21,7 +21,7 @@ export default Ember.Route.extend({
         createNewContact: function() {
             var newRecord = this.store.createRecord('contact');
             newRecord.save().then(function(record) {
-                this.transitionTo('contacts.view', record);
+                this.transitionTo('contacts.view', record, {queryParams: {edit: true}});
             }.bind(this));
         },
 

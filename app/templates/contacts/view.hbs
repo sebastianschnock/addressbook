@@ -9,7 +9,8 @@
     {{!-- first name --}}
 
     <div class='contact-details__first-name'>
-        {{#if isEditing}}
+        {{#if edit}}
+            <label>First name</label>
             {{input value=firstName}}
         {{else}}
             {{firstName}}
@@ -20,7 +21,8 @@
     {{!-- last name --}}
 
     <div class='contact-details__last-name'>
-        {{#if isEditing}}
+        {{#if edit}}
+            <label>Last name</label>
             {{input value=lastName}}
         {{else}}
             {{lastName}}
@@ -31,7 +33,8 @@
     {{!-- address --}}
 
     <div class='contact-details__address'>
-        {{#if isEditing}}
+        {{#if edit}}
+            <label>Address</label>
             {{textarea value=address cols=25 rows=3}}
         {{else}}
             {{address}}
@@ -42,7 +45,8 @@
     {{!-- email --}}
 
     <div class='contact-details__email'>
-        {{#if isEditing}}
+        {{#if edit}}
+            <label>Email</label>
             {{input type='email' value=email}}
         {{else}}
             {{email}}
@@ -57,12 +61,12 @@
         ❌
     </button>
 
-    {{#if isEditing}}
+    {{#if edit}}
         <button class='save-details-button' {{action 'save' model}}>
             Save
         </button>
     {{else}}
-        <button class='edit-details-button' {{action 'edit'}}>
+        <button class='edit-details-button' {{action 'switchToEditMode'}}>
             Edit
         </button>
     {{/if}}

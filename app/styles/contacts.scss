@@ -12,9 +12,9 @@
 .contact-details {
 
  
-    // @include span(12);
-    @include prefix(1);
-    @include suffix(1);
+    @include span(isolate 10 at 2);
+    // @include prefix(1);
+    // @include suffix(1);
     padding-top: rhythm(1);
 
     position: relative;
@@ -32,7 +32,7 @@
 
     position: absolute;
     top: 1em;
-    right: 1em;
+    right: -1em;
 
     width: 2em;
     height: 2em;
@@ -51,6 +51,27 @@
 
 
 
+
+
+//------------------------------------------------------------------------------
+//
+//  Edit mode
+//
+//------------------------------------------------------------------------------
+
+
+
+.contact-details {
+
+    label {
+        display: block;
+    }
+}
+
+
+
+
+
 //------------------------------------------------------------------------------
 //
 //  Breakpoints
@@ -59,13 +80,32 @@
 
 
 
+@include susy-breakpoint($breakpoint-s) {
+
+
+
+    .contact-details {
+
+        label {
+            @include span(3 of 10);
+        }
+    }
+}
+
+
+
 @include susy-breakpoint($breakpoint-m) {
 
 
 
     .contact-details {
+
         position: relative;
-        @include span(8 last);
+        @include span(isolate 6 at 2);
+
+        label {
+            @include span(2 of 6);
+        }        
     }
 
     .close-details-button {
