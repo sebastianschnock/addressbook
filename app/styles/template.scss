@@ -23,13 +23,17 @@
 
 .main-content {
     @include container;
-    position: relative;
 }
 
 // navigation
 
 .main-navigation {
     @include span(12);
+
+    // hide on small screens when contact details are shown
+    &.contact-details-shown {
+        display: none;
+    }
 }
 
 .main-navigation__header {
@@ -51,6 +55,9 @@
     //     border-bottom: 1px solid $border-color--default;
     // }
     cursor: pointer;
+    a {
+        outline: 0;
+    }
 }
 
 
@@ -70,6 +77,12 @@
 
 
     .main-navigation {
+
         @include span(4);
+
+        // always show navigation on bigger screens
+        &.contact-details-shown {
+            display: block;
+        }        
     }
 }

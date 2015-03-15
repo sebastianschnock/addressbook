@@ -11,19 +11,14 @@
 
 .contact-details {
 
-    // new container context 
-    @include container;
-    position: absolute;
-    top: 0;
-    right: 0;
-    // bottom: 0;
-    left: 0;
  
     // @include span(12);
     @include prefix(1);
+    @include suffix(1);
     padding-top: rhythm(1);
 
-    background-color: #ffffff;
+    position: relative;
+    // background-color: #ffffff;
 }
 
 .contact-details__display-name {
@@ -36,14 +31,11 @@
 .close-details-button {
 
     position: absolute;
-    top: 0.5em;
+    top: 1em;
     right: 1em;
 
     width: 2em;
     height: 2em;
-
-    // text-align: center;
-    // cursor: pointer;
 
     a {
         @include unstyled-link;
