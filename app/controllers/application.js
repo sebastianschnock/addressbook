@@ -7,9 +7,6 @@ export default Ember.ArrayController.extend({
 
     contactDetailsShown: function() {
         return this.get('currentRouteName') === 'contacts.view';
-    }.property('currentRouteName'),
+    }.property('currentRouteName')
 
-    hi: function() {
-        console.log('application HI!');
-    }.on('init')
 });
