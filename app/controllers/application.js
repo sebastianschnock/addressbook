@@ -1,11 +1,15 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.ArrayController.extend({
 
+    sortProperties: ['firstName', 'lastName'],
+    sortAscending: true,
 
     contactDetailsShown: function() {
         return this.get('currentRouteName') === 'contacts.view';
-    }.property('currentRouteName')
+    }.property('currentRouteName'),
 
-
+    hi: function() {
+        console.log('application HI!');
+    }.on('init')
 });

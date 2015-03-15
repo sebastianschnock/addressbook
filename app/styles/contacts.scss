@@ -22,8 +22,10 @@
 }
 
 .contact-details__display-name {
+
+    @include span(9 of 10);
     // margin-left: -0.5em;
-    @include adjust-font-size-to($font-size--xl);
+    @include adjust-font-size-to($font-size--l);
     // font-family: 'Montserrat';
     font-weight: bold;
 }
@@ -32,7 +34,8 @@
 
     position: absolute;
     top: 1em;
-    right: -1em;
+    // right: -1em;
+    right: 0;
 
     width: 2em;
     height: 2em;
@@ -45,11 +48,15 @@
 }
 
 .edit-details-button,
-.save-details-button {
+.save-details-button,
+.delete-contact-button {
     @include leader(1);
 }
 
-
+.delete-contact-button {
+    float: right;
+    // background-color: $color-button__bg--warning;
+}
 
 
 
