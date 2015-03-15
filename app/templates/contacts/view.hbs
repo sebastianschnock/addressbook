@@ -1,14 +1,14 @@
-<div class="contact-details">
+<div class='contact-details'>
 
     {{!-- display name --}}
 
-    <div class="contact-details__display-name">
+    <div class='contact-details__display-name'>
         {{displayName}}
     </div>
     
     {{!-- first name --}}
 
-    <div class="contact-details__first-name">
+    <div class='contact-details__first-name'>
         {{#if isEditing}}
             {{input value=firstName}}
         {{else}}
@@ -19,7 +19,7 @@
 
     {{!-- last name --}}
 
-    <div class="contact-details__last-name">
+    <div class='contact-details__last-name'>
         {{#if isEditing}}
             {{input value=lastName}}
         {{else}}
@@ -30,7 +30,7 @@
     
     {{!-- address --}}
 
-    <div class="contact-details__address">
+    <div class='contact-details__address'>
         {{#if isEditing}}
             {{textarea value=address cols=25 rows=3}}
         {{else}}
@@ -41,7 +41,7 @@
 
     {{!-- email --}}
 
-    <div class="contact-details__email">
+    <div class='contact-details__email'>
         {{#if isEditing}}
             {{input type='email' value=email}}
         {{else}}
@@ -53,19 +53,23 @@
 
     {{!-- actions --}}
 
-    <button class="close-details-button" {{action 'closeDetails'}}>
+    <button class='close-details-button' {{action 'closeDetails'}}>
         ❌
     </button>
 
     {{#if isEditing}}
-        <button class="save-details-button" {{action 'save' model}}>
+        <button class='save-details-button' {{action 'save' model}}>
             Save
         </button>
     {{else}}
-        <button class="edit-details-button" {{action 'edit'}}>
+        <button class='edit-details-button' {{action 'edit'}}>
             Edit
         </button>
     {{/if}}
+
+    <button class='delete-contact-button' {{action 'delete' model}}>
+        Delete
+    </button>
 
 </div>
 
