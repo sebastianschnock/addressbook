@@ -16,6 +16,7 @@
 npm-debug.log
 testem.log
 /vendor
+contacts.js.bak
 
 # ignored for now, might change later
 .bowerrc
