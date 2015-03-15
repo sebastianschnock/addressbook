@@ -8,7 +8,7 @@ module.exports = {
 };
 
 // requires
-var db = require('./contacts.js').db;
+var db = require('../contacts.js').db;
 var fs = require('fs');
 
 // change to 'false' to make the database read-only

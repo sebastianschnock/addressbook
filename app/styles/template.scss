@@ -45,8 +45,29 @@
 
     @include adjust-leading-to(2);
 
-    border-top: 1px solid $border-color--default;
-    &:last-of-type {
-        border-bottom: 1px solid $border-color--default;
+    border-bottom: 1px solid $border-color--default;
+    // &:last-of-type {
+    //     border-bottom: 1px solid $border-color--default;
+    // }
+}
+
+
+
+
+
+//------------------------------------------------------------------------------
+//
+//  Breakpoints
+//
+//------------------------------------------------------------------------------
+
+
+
+@include susy-breakpoint($breakpoint-m) {
+
+
+
+    .main-navigation {
+        @include span(4);
     }
 }

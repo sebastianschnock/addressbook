@@ -18,3 +18,4 @@ Access at [http://localhost:4200](http://localhost:4200)
 
 - [ ] give contact list items a random (very light) color
 - [ ] check font compability
+- [ ] handle line breaks in address field

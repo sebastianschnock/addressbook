@@ -16,13 +16,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
+    // bottom: 0;
     left: 0;
  
     // @include span(12);
     @include prefix(1);
     padding-top: rhythm(1);
-    
+
     background-color: #ffffff;
 }
 
@@ -42,12 +42,41 @@
     width: 2em;
     height: 2em;
 
-    text-align: center;
-    cursor: pointer;
+    // text-align: center;
+    // cursor: pointer;
 
     a {
         @include unstyled-link;
         display: block;
         height: 100%;
+    }
+}
+
+.edit-details-button,
+.save-details-button {
+    @include leader(1);
+}
+
+
+
+//------------------------------------------------------------------------------
+//
+//  Breakpoints
+//
+//------------------------------------------------------------------------------
+
+
+
+@include susy-breakpoint($breakpoint-m) {
+
+
+
+    .contact-details {
+        position: relative;
+        @include span(8 last);
+    }
+
+    .close-details-button {
+        display: none;
     }
 }

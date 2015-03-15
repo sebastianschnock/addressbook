@@ -9,38 +9,63 @@
     {{!-- first name --}}
 
     <div class="contact-details__first-name">
-        {{firstName}}
+        {{#if isEditing}}
+            {{input value=firstName}}
+        {{else}}
+            {{firstName}}
+        {{/if}}
     </div>
 
 
     {{!-- last name --}}
 
     <div class="contact-details__last-name">
-        {{lastName}}
+        {{#if isEditing}}
+            {{input value=lastName}}
+        {{else}}
+            {{lastName}}
+        {{/if}}
     </div>
 
     
     {{!-- address --}}
 
     <div class="contact-details__address">
-        {{address}}
+        {{#if isEditing}}
+            {{textarea value=address cols=25 rows=3}}
+        {{else}}
+            {{address}}
+        {{/if}}
     </div>
 
 
     {{!-- email --}}
 
     <div class="contact-details__email">
-        {{email}}
+        {{#if isEditing}}
+            {{input type='email' value=email}}
+        {{else}}
+            {{email}}
+        {{/if}}
     </div>
 
 
 
     {{!-- actions --}}
 
-    <div class="close-details-button">
-        {{#link-to 'contacts'}}❌{{/link-to}}
-    </div>
+    <button class="close-details-button" {{action 'closeDetails'}}>
+        ❌
+    </button>
 
+    {{#if isEditing}}
+        <button class="save-details-button" {{action 'save' model}}>
+            Save
+        </button>
+    {{else}}
+        <button class="edit-details-button" {{action 'edit'}}>
+            Edit
+        </button>
+    {{/if}}
 
 </div>
 
