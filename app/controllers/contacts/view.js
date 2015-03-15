@@ -31,4 +31,5 @@ export default Ember.ObjectController.extend({
             this.transitionToRoute('contacts');
         }
     }
+
 });

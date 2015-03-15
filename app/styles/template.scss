@@ -12,9 +12,9 @@
 
 .main-header {
  
-    @include adjust-font-size-to($font-size-xl);
+    @include adjust-font-size-to($font-size--xl);
     // @extend %header--centered;
-    border-bottom: 1px solid $border-color--default;
+    border-bottom: 1px solid $color-border--default;
     padding: rhythm(0.5) 0;
     font-family: 'FFF_Tusj';
     // font-family: 'GrandHotel';
@@ -37,7 +37,7 @@
 }
 
 .main-navigation__header {
-    @include adjust-font-size-to($font-size-l);
+    @include adjust-font-size-to($font-size--l);
     @extend %header--centered;
 }
 
@@ -49,10 +49,10 @@
 
     @include adjust-leading-to(2);
 
-    border-bottom: 1px solid $border-color--default;
-    border-right: 1px solid $border-color--default;
+    border-bottom: 1px solid $color-border--default;
+    border-right: 1px solid $color-border--default;
     // &:last-of-type {
-    //     border-bottom: 1px solid $border-color--default;
+    //     border-bottom: 1px solid $color-border--default;
     // }
     cursor: pointer;
     a {
@@ -78,7 +78,7 @@
 
     .main-header {
      
-        @include adjust-font-size-to($font-size-xxl);
+        @include adjust-font-size-to($font-size--xxl);
     }
 }
 

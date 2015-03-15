@@ -12,9 +12,10 @@ $base-font-size: 16px;
 $base-line-height: 24px;
 @include establish-baseline;
 
-$font-size-l: 24px;
-$font-size-xl: 32px;
-$font-size-xxl: 48px;
+$font-size--default: $base-font-size;
+$font-size--l: 24px;
+$font-size--xl: 32px;
+$font-size--xxl: 48px;
 
 
 

@@ -23,7 +23,7 @@
 
 .contact-details__display-name {
     // margin-left: -0.5em;
-    @include adjust-font-size-to($font-size-xl);
+    @include adjust-font-size-to($font-size--xl);
     // font-family: 'Montserrat';
     font-weight: bold;
 }

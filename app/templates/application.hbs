@@ -20,7 +20,10 @@
             {{!-- contacts --}}
             {{#each contact in model}}
             <li class='contact-list-item'>
-                {{#link-to 'contacts.view' contact}}
+                {{!-- we must set current-when explicitely to keep 'active' class 
+                      when no query param is set 
+                      http://stackoverflow.com/questions/26722029/ember-link-to-ignore-query-params-to-bind-class-active --}}
+                {{#link-to 'contacts.view' contact (query-params edit='false') current-when="contacts.view"}}
                     {{contact.displayName}}
                 {{/link-to}}
             </li>
