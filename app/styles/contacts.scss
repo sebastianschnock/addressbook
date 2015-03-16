@@ -51,7 +51,7 @@
 .edit-details-button,
 .save-details-button,
 .delete-contact-button {
-    @include leader(1);
+    @include leader(2);
 }
 
 .delete-contact-button {
