@@ -40,6 +40,8 @@
     width: 2em;
     height: 2em;
 
+    cursor: pointer;
+
     a {
         @include unstyled-link;
         display: block;

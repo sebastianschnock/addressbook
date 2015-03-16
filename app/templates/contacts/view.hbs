@@ -57,9 +57,9 @@
 
     {{!-- actions --}}
 
-    <button class='close-details-button' {{action 'closeDetails'}}>
-        ❌
-    </button>
+    <div class='close-details-button' {{action 'closeDetails'}}>
+        close
+    </div>
 
     {{#if edit}}
         <button class='save-details-button' {{action 'save' model}}>
