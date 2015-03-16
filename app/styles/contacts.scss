@@ -23,7 +23,8 @@
 
 .contact-details__display-name {
 
-    @include span(9 of 10);
+    @include span(full);
+    @include suffix(1);
     // margin-left: -0.5em;
     @include adjust-font-size-to($font-size--l);
     // font-family: 'Montserrat';
@@ -42,10 +43,8 @@
 
     cursor: pointer;
 
-    a {
-        @include unstyled-link;
-        display: block;
-        height: 100%;
+    &:hover {
+        color: $color-link--hover;
     }
 }
 
