@@ -19,4 +19,5 @@ Access at [http://localhost:4200](http://localhost:4200)
 - [ ] give contact list items a random (very light) color
 - [ ] check font compability
 - [ ] handle line breaks in address field
-- [ ] add nicer buttons, maybe icons instead of text
+- [ ] add icons instead of button text
+- [ ] move displayName computed property to controller
