@@ -12,13 +12,6 @@ Router.map(function() {
             path: ':contact_id'
         });
     });
-
-    // this.resource('contacts', function() {
-    //     this.route('view', {
-    //         path: ':contact_id'
-    //     });
-    // });
-
 });
 
 export default Router;
