@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'addressbook',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://addressbook-demo.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
