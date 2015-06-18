@@ -3,7 +3,7 @@
     {{!-- display name --}}
 
     <div class='contact-details__display-name'>
-        {{displayName}}
+        {{model.displayName}}
     </div>
     
     {{!-- first name --}}
@@ -11,9 +11,9 @@
     <div class='contact-details__first-name'>
         {{#if edit}}
             <label>First name</label>
-            {{input value=firstName}}
+            {{input value=model.firstName}}
         {{else}}
-            {{firstName}}
+            {{model.firstName}}
         {{/if}}
     </div>
 
@@ -23,9 +23,9 @@
     <div class='contact-details__last-name'>
         {{#if edit}}
             <label>Last name</label>
-            {{input value=lastName}}
+            {{input value=model.lastName}}
         {{else}}
-            {{lastName}}
+            {{model.lastName}}
         {{/if}}
     </div>
 
@@ -35,9 +35,9 @@
     <div class='contact-details__address'>
         {{#if edit}}
             <label>Address</label>
-            {{textarea value=address cols=25 rows=3}}
+            {{textarea value=model.address cols=25 rows=3}}
         {{else}}
-            {{address}}
+            {{model.address}}
         {{/if}}
     </div>
 
@@ -47,9 +47,9 @@
     <div class='contact-details__email'>
         {{#if edit}}
             <label>Email</label>
-            {{input type='email' value=email}}
+            {{input type='email' value=model.email}}
         {{else}}
-            {{email}}
+            {{model.email}}
         {{/if}}
     </div>
 
