@@ -14,6 +14,9 @@ ember serve
 ```
 Access at [http://localhost:4200](http://localhost:4200)
 
+# Live demo
+There is a live demo at https://addressbook-demo.firebaseapp.com
+
 # Todo
 
 - [ ] give contact list items a random (very light) color
