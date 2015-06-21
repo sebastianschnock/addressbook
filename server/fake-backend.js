@@ -16,6 +16,7 @@ var backupsEnabled = true;
 
 var idCounters = {
     contacts: getHighestId('contacts')+1,
+    groups: getHighestId('groups')+1,
 };
 
 function getHighestId(type) {

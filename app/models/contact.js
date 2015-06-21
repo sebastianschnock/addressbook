@@ -5,6 +5,7 @@ export default DS.Model.extend({
     lastName: DS.attr('string'),
     address: DS.attr('string'),
     email: DS.attr('string'),
+    groups: DS.hasMany('group', {async: true}),
 
     displayName: function() {
         if(this.get('lastName') !== undefined) {

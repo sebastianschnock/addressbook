@@ -54,6 +54,17 @@
     </div>
 
 
+    {{!-- groups --}}
+
+    <div class='contact-details__groups'>
+        <header>Groups</header>
+        <ul>
+        {{#each group in model.groups}}
+            <li>{{group.name}}</li>            
+        {{/each}}
+        </ul>
+    </div>
+
 
     {{!-- actions --}}
 
