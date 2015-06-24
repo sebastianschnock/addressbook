@@ -9,7 +9,7 @@ A simple single page addressbook app powered by Ember.js
 ```
 git clone https://github.com/sebastianschnock/addressbook.git
 cd addressbook
-ember install
+npm install && bower install
 ember serve
 ```
 Access at [http://localhost:4200](http://localhost:4200)
