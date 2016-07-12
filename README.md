@@ -1,3 +1,5 @@
+[![Dependency Status](https://dependencyci.com/github/sebastianschnock/addressbook/badge)](https://dependencyci.com/github/sebastianschnock/addressbook)
+
 # Addressbook
 A simple single page addressbook app powered by Ember.js
 
